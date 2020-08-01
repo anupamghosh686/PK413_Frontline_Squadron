@@ -1,0 +1,64 @@
+<?php 
+
+$host="localhost";
+$user="root";
+$password="";
+$db="sih";
+
+mysql_connect($host,$user,$password);
+mysql_select_db($db);
+
+if(isset($_POST['username'])){
+    
+    $uname=$_POST['username'];
+    $password=$_POST['password'];
+    
+    $sql="select * from loginform where user='".$uname."'AND Pass='".$password."' limit 1";
+    
+    $result=mysql_query($sql);
+    
+    if(mysql_num_rows($result)==1){
+        echo " You Have Successfully Logged in";
+        exit();
+    }
+    else{
+        echo " You Have Entered Incorrect Password";
+        exit();
+    }
+        
+}
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="loginstyle.css" type="text/css">
+</head>
+<body>
+    <header>
+    <div class="left_area">
+        <h3>Frontline <span>Squadron</span></h3>
+      </div>
+      <div class="right_area">
+             <a href="#" class="logout_btn">Contact Us</a>
+      </div>
+    </header>
+    <div class="loginbox">
+        <img src="./images/avatar.png" alt="avatar" class="avatar">
+        <h1>Login Here</h1>
+        <form method="$POST" action="#">
+            <p>Username</p>
+            <input type="text" name="username" placeholder="Enter Username">
+            <p>Password</p>
+            <input type="password" name="password" placeholder="Enter Password">
+            <input type="submit" name="" value="Login" action="home.html">
+            
+            <a href="#">Lost your password?</a><br>
+            <a href="#">Don't have an account?</a>
+        </form>
+    </div>
+
+</body>
+</html>
