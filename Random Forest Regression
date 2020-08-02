@@ -1,0 +1,163 @@
+import numpy as np
+import matplotlib.pyplot as plt
+import pandas as pd
+%matplotlib inline
+#SPLITTING DATASET
+from sklearn.model_selection import train_test_split
+X_train, X_test, y_train, y_test = train_test_split(X,y,test_size = 0.2, random_state=0)
+
+from sklearn import preprocessing
+columns_to_scale = df.columns.tolist()
+columns_to_scale = [x for x in columns_to_scale if x != "Yield"]
+print(columns_to_scale)
+
+std_scaler = preprocessing.StandardScaler().fit(X_train[columns_to_scale])
+minmax_scaler = preprocessing.MinMaxScaler().fit(X_train[columns_to_scale])
+
+X_train[columns_to_scale] = std_scaler.transform(X_train[columns_to_scale])
+
+#APPLY SCALER ON TEST SET
+
+from sklearn.model_selection import cross_val_score
+cv_k = 5
+cv_scoring = 'neg_mean_squared_error'
+cv_scoring = 'r2'
+
+import seaborn as sns
+from pandas import DataFrame
+
+df = pd.read_csv("mango.csv")
+df.head()
+
+df.isnull().sum()
+
+X = df.iloc[:, :-1]
+y = df.iloc[:, 8]
+
+X =X.fillna(0)
+
+X.isnull().sum()
+
+#SPLITTING DATASET
+from sklearn.model_selection import train_test_split
+X_train, X_test, y_train, y_test = train_test_split(X,y,test_size = 0.2, random_state=0)
+
+from sklearn import preprocessing
+columns_to_scale = df.columns.tolist()
+columns_to_scale = [x for x in columns_to_scale if x != "Yield"]
+print(columns_to_scale)
+
+std_scaler = preprocessing.StandardScaler().fit(X_train[columns_to_scale])
+minmax_scaler = preprocessing.MinMaxScaler().fit(X_train[columns_to_scale])
+
+X_train[columns_to_scale] = std_scaler.transform(X_train[columns_to_scale])
+
+X_test[columns_to_scale] = std_scaler.transform(X_test[columns_to_scale])
+
+from sklearn.model_selection import cross_val_score
+cv_k = 5
+cv_scoring = 'neg_mean_squared_error'
+cv_scoring = 'r2'
+
+from sklearn.model_selection import KFold
+kf = KFold(n_splits=cv_k, shuffle=True)
+
+from sklearn import linear_model
+from sklearn.preprocessing import PolynomialFeatures
+from sklearn.ensemble import RandomForestRegressor
+from sklearn.ensemble import GradientBoostingRegressor
+from sklearn import neighbors
+from sklearn.svm import SVR
+
+import time
+
+#RANDOM FOREST REGRESSION
+
+now = time.time()
+est_best = RandomForestRegressor(n_estimators=10, n_jobs=-1)
+est_best.fit(X_train, y_train)
+scores = cross_val_score(est_best, X_train, y_train, cv=kf, scoring=cv_scoring)
+print("ACCURACY: %0.4f (+/- %0.4f)" % (scores.mean(), scores.std() * 2))
+after = time.time()
+print("Exec. time: {:5.2} s".format(after-now))
+
+#PREDICTING THE TEST SET RESULTS
+
+y_pred = est_best.predict(X_test)
+
+from sklearn.metrics import r2_score
+score = r2_score(y_test, y_pred)
+
+score
+
+y_test[100]
+
+y_pred[100]
+
+
+y_pred.shape
+
+y_test.dtypes
+
+import pickle
+import joblib
+
+joblib.dump(est_best, "best_regressor_model.pkl")
+
+
+import joblib
+
+
+#TAKING THE USER INPUT
+
+
+
+Latitude = float(input("Latitude: ")) 
+
+Longitude = float(input("Longitude: ")) 
+
+ATMAX =  float(input("ATMAX: ")) 
+
+ATMIN = float(input("ATMIN: ")) 
+
+humidity = float(input("humidity: ")) 
+
+pressure = float(input("pressure: ")) 
+
+tempmax = float(input("tempmax: ")) 
+
+tempmin = float(input("tempmin: ")) 
+
+
+
+pred_args = [Latitude, Longitude, ATMAX, ATMIN, humidity, pressure, tempmax, tempmin]
+pred_args_arr = np.array(pred_args)
+pred_args_arr = pred_args_arr.reshape(1, -1)
+mul_reg = open("multiple_regressor_model.pkl", "rb")
+ml_model = joblib.load(mul_reg)
+model_prediction = ml_model.predict(pred_args_arr)
+
+round(float(model_prediction), 2)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
