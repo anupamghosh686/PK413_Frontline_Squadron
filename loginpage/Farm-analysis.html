@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hawk-Eye</title>
+  <link rel="stylesheet" href="Style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+  <script src="https://use.fontawesome.com/f23e68820f.js"></script>
+  <link rel="stylesheet" href="2fa-style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pixeden-stroke-7-icon@1.2.3/pe-icon-7-stroke/dist/pe-icon-7-stroke.min.css">
+  <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+</head>
+
+<body>
+  <input type="checkbox" name="" id="check">
+  <!-- header area start-->
+  <header>
+    <label for="check">
+      <i class="fas fa-bars" id="sidebar_btn"></i>
+    </label>
+    <div class="left_area">
+      <h3>Frontline <span>Squadron</span></h3>
+    </div>
+    <div class="right_area">
+      <a href="login.php" class="logout_btn">Logout</a>
+    </div>
+  </header>
+  <!-- header area end-->
+  <!-- sidebar start -->
+  <div class="sidebar">
+    <center>
+      <img src="./images/A.png" width="120" height="100" class="Profile_image" alt="">
+      <h4>Anupam</h4>
+    </center>
+    <a href="Home.html"><i class="fas fa-desktop"></i><span>Dashboard/ डैशबोर्ड </span></a>
+    <a href="Farm-analysis.html"><i class="fas fa-chart-area"></i><span>Farm analysis/ विश्लेषण</span></a>
+    <a href="alert.html"><i class="fas fa-exclamation-triangle"></i><span>Alerts/ चेतावनी</span></a>
+    <a href="store.html"><i class="fas fa-shopping-cart"></i><span>Store/ऑनलाइन-दुकान</span></a>
+    <a href="#"><i class="fab fa-sourcetree"></i><span>Resources/ संसाधन</span></a>
+    <a href="#"><i class="fas fa-poo-storm"></i><span>Schemes/
+        योजना </span></a>
+
+  </div>
+  <!-- sidebar end-->
+  <div class="content">
+    <div class="hero-image">
+      <div class="container">
+        <h1><span>Analysis</span></h1>
+        <span class="des">Personalized</span>
+        <a class="btan" href="#">Know More</a>
+      </div>
+      <section class="find">
+        <div class="search-box">
+          <input class="search-txt" type="text" name="" placeholder="Type to search">
+          <a class="search-btn" href="#"><i class="fas fa-search"></i></a>
+        </div>
+      </section>
+    </div>
+
+  <div class="top-content">
+  <!-- Widget Start-->
+  <div class="card-body color1">
+    <div class="float-left">
+      <h3>
+        <span class="currency">Area(ha)</span>
+        <span class="count">150</span>
+      </h3>
+      <p>Predicted Yield</p>
+      <div class="float-right">
+        
+      </div>
+    </div>
+  </div>
+  <!-- Widget end-->
+  <!-- Widget Start-->
+  <div class="card-body color2">
+    <div class="float-left">
+      <h3>
+        <span class="currency">ph</span>
+        <span class="count">7</span>
+      </h3>
+      <p>Slightly Basic</p>
+      <div class="float-right">
+        
+      </div>
+    </div>
+  </div>
+  <!-- Widget end-->
+  <!-- Widget Start-->
+  <div class="card-body color3">
+    <div class="float-left">
+      <h3>
+        <span class="currency">August</span>
+        <span class="count">3</span>
+      </h3>
+      <p>Date</p>
+      <div class="float-right">
+        
+      </div>
+    </div>
+  </div>
+  <!-- Widget end-->
+  <!-- Widget Start-->
+  <div class="card-body color4">
+    <div class="float-left">
+      <h3>
+        <span class="currency">Moisture(gm/m^3)</span>
+        <span class="count">202.9355362</span>
+      </h3>
+      <p>Average</p>
+      <div class="float-right">
+        
+      </div>
+    </div>
+  </div>
+  <!-- Widget end-->
+
+  <script type="text/javascript">
+    $('.count').each(function(){
+        $(this).prop('Counter',0).animate({
+            Counter: $(this).text()
+        }, {
+            duration:4000,
+            easing:'swing',
+            step: function(now){
+                $(this).text(Math.ceil(now));
+            }
+        });
+    });
+    </script>
+
+  </div>
+<div class="next-content">
+  <div class="main-cards">
+    <div class="card"></div>
+    <div class="card"></div>
+    <div class="card">
+    <h1>Analysis Report</h1>
+    <p>As per your request we did a detailed analysis of your Farm and the results are as follows:</p>
+    <table class="content-table">
+      <thead>
+        <tr>
+          <th>SoilTest?</th>
+          <th>Yield</th>
+          <th>Predicted Crop</th>
+          <th>Land Health</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="active-row">
+          <td>Yes</td>
+          <td>35.23</td>
+          <td>Rice</td>
+          <td>Healthy </td>
+        </tr>
+      </tbody>
+      </table>
+    </div>
+  </div>
+<button><a href="#">Generate Detailed report</a></button>
+</div>
+
+
+<!--Footer starts here-->
+    <footer class="footer-distributed">
+
+      <div class="footer-left">
+
+        <h3>The Frontline<span>Squadron</span></h3>
+
+        <p class="footer-links">
+          <a href="#">Home</a>
+          ·
+          <a href="#">Know more</a>
+          ·
+          <a href="#">Analysis</a>
+          ·
+          <a href="#">About</a>
+          ·
+          <a href="#">Faq</a>
+          ·
+          <a href="#">Contact</a>
+        </p>
+
+        <p class="footer-company-name">AnupamGhosh &copy; 2020</p>
+      </div>
+
+      <div class="footer-center">
+
+        <div>
+          <i class="fa fa-map-marker"></i>
+          <p><span> Revolution Street</span> Chennai, India</p>
+        </div>
+
+        <div>
+          <i class="fa fa-phone"></i>
+          <p>+91-7738106810</p>
+        </div>
+
+        <div>
+          <i class="fa fa-envelope"></i>
+          <p><a href="mailto:anupamghosh686@gmail.com">anupamghosh686@gmail.com</a></p>
+        </div>
+
+      </div>
+
+      <div class="footer-right">
+
+        <p class="footer-company-about">
+          <span>About the company</span>
+          We are a Team of 6, graphic designers, web developers ,Coders &amp;.
+        </p>
+
+        <div class="footer-icons">
+
+          <a href="#"><i class="fa fa-facebook"></i></a>
+          <a href="#"><i class="fa fa-twitter"></i></a>
+          <a href="#"><i class="fa fa-linkedin"></i></a>
+          <a href="#"><i class="fa fa-github"></i></a>
+
+        </div>
+
+      </div>
+
+    </footer>
+<!--Footer ends here-->
+  </div>
+
+
+</body>
+
+</html>

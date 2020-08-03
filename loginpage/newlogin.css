@@ -1,0 +1,59 @@
+.left_area h3{
+    color: #fff;
+    margin: 0 10px;
+    text-transform: uppercase;
+    font-size: 22px;
+    font-weight: 900;
+    }  
+   .left_area span{
+     color:#010303;
+   
+   }
+   .logout_btn{
+     padding: 5px;
+     background: #19B3D3;
+     text-decoration: none;
+     float: right;
+     margin-top: -30px;
+     margin-right: 40px;
+     border-radius: none;
+     font-size: 15px;
+     font-weight: 600;
+     color: #fff;
+     transition: .5s;
+     transition-property: background;
+   }
+   .logout_btn:hover{
+     background:  #0D9DBB;
+   }
+   header{
+    position: fixed;
+    background:linear-gradient(60deg, #29323c 0%, #485563 100%);
+    padding: 20px;
+    width: 100%;
+    height: 70px;
+    z-index: 2;
+    }
+.container{
+    padding-top: 100px;
+}
+body{
+    margin: 0;
+    padding: 0;
+    background: url(./images/21635.jpg);
+    background-size: auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    font-family: sans-serif;
+}
+label{
+    font-size: 1.6rem;
+    color: aliceblue;
+    font-weight: bold;
+}
+form{
+    padding-top: 5px;
+}
+h1 .pad{
+padding-top:5px;
+}

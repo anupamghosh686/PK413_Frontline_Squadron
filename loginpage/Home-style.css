@@ -1,0 +1,113 @@
+.top-content{
+    padding-top: 35px;
+    margin-left: 100px;
+    height: 100vh;
+    transition: 0.5s;
+}
+.color1{
+    background: #00C292;
+}
+.color2{
+    background: #03A9F3;
+}
+.color3{
+    background: #FB7146;
+}
+.color4{
+    background: #dadd23;
+}
+.card-body{
+    display: inline-block;
+    font-family: sans-serif;
+    
+    margin:10px;
+    padding:20px;
+    width: 250px;
+    height:90px;
+    color: #fff;
+    border-radius:5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+
+}
+.float-left{
+    float: left;
+}
+.float-right{
+    float: right;
+}
+
+.card-body h3{
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+.currency, .count{
+    font-size: 30px;
+    font-weight: 500;
+}
+.card-body p{
+    font-size: 16px;
+    margin-top: 0;
+}
+.card-body i{
+    font-size: 95px;
+    opacity: 0.5;
+}
+.dash-graph{
+    margin-top: -700px;
+    padding-top: 35px;
+    margin-left: 100px;
+    margin-right:100px ;
+    margin-bottom:70px;
+    height: 100vh;
+    transition: 0.5s; 
+}
+.table-content{
+    padding-top: 35px;
+    margin-left: 120px;
+    height: 100vh;
+    width: 1200px;
+    transition: 0.5s;   
+    margin-bottom:-550px;
+
+}
+
+.content-table {
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    min-width: 400px;
+    width: 1200px;
+    border-radius: 5px 5px 0 0;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+  }
+  
+  .content-table thead tr {
+    background-color: #009879;
+    color: #ffffff;
+    text-align: left;
+    font-weight: bold;
+  }
+  
+  .content-table th,
+  .content-table td {
+    padding: 12px 15px;
+  }
+  
+  .content-table tbody tr {
+    border-bottom: 1px solid #dddddd;
+  }
+  
+  .content-table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+  }
+  
+  .content-table tbody tr:last-of-type {
+    border-bottom: 2px solid #009879;
+  }
+  
+  .content-table tbody tr.active-row {
+    font-weight: bold;
+    color: #009879;
+  }
+  
